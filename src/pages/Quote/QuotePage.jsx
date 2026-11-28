@@ -40,6 +40,24 @@ const projectTypes = [
     recommendedStack: 'React / Next.js + Node.js + Tailwind',
   },
   {
+    id: 'web-crm',
+    name: 'Website + Custom CRM Bundle',
+    desc: 'Turnkey bundle: High-converting website directly integrated into your dedicated custom CRM',
+    basePrice: 8900,
+    baseWeeks: 8,
+    icon: Database,
+    recommendedStack: 'Next.js Frontend + React CRM + Node.js API + MongoDB',
+  },
+  {
+    id: 'crm',
+    name: 'Custom CRM & Sales Pipeline',
+    desc: 'Bespoke CRM with lead pipelines, multi-agent dispatch, and WhatsApp automation',
+    basePrice: 6500,
+    baseWeeks: 6,
+    icon: Database,
+    recommendedStack: 'React.js + Node.js + MongoDB + WhatsApp Cloud API',
+  },
+  {
     id: 'mobile',
     name: 'Mobile App (iOS & Android)',
     desc: 'Cross-platform React Native app with native performance',
@@ -87,6 +105,8 @@ const projectTypes = [
 ];
 
 const featureAddons = [
+  { id: 'crm-sync', name: 'Website-to-CRM Webhook Sync', price: 1400, weeks: 1, desc: 'Real-time webhook pipelines pushing website leads into CRM' },
+  { id: 'whatsapp-bot', name: 'WhatsApp & Email Auto-Sequences', price: 1600, weeks: 1, desc: 'Instant WhatsApp message triggers & sales agent alerts' },
   { id: 'auth', name: 'User Authentication & RBAC', price: 1200, weeks: 1, desc: 'OAuth, Magic Links, role hierarchies' },
   { id: 'payments', name: 'Payment Gateway & Invoicing', price: 1600, weeks: 1, desc: 'Stripe, PayPal, recurring subscription flows' },
   { id: 'realtime', name: 'Real-Time WebSockets / Chat', price: 2200, weeks: 2, desc: 'Live notifications, chat, live GPS maps' },

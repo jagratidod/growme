@@ -95,7 +95,7 @@ export default function Navbar({ onOpenSearch }) {
                             CAPABILITIES CATALOG
                           </div>
                           <div className="space-y-1">
-                            {services.slice(0, 7).map((service) => (
+                            {services.map((service) => (
                               <Link
                                 key={service.slug}
                                 to={`/services/${service.slug}`}

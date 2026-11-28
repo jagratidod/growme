@@ -1,5 +1,5 @@
 import {
-  Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat
+  Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat, Database, Users
 } from 'lucide-react';
 
 export const services = [
@@ -387,10 +387,58 @@ export const services = [
       { question: 'What ROI can I expect?', answer: 'Most businesses see improved efficiency, reduced costs, and increased revenue within 6-12 months of implementation.' },
     ],
   },
+  {
+    id: 9,
+    slug: 'custom-crm-development',
+    title: 'Custom CRM Development',
+    shortTitle: 'Custom CRM & ERP',
+    icon: 'Database',
+    description: 'Bespoke CRM systems engineered to capture website leads, automate follow-ups, and accelerate sales pipelines.',
+    shortDescription: 'Tailored CRM systems with automated lead pipelines and website sync.',
+    heroHeading: 'Custom CRM Solutions Tailored to Your Sales Process.',
+    heroDescription: 'Stop losing leads in spreadsheets. We build bespoke CRM and lead management platforms integrated seamlessly with your website, WhatsApp, and email workflows to help your sales team close deals faster.',
+    features: [
+      'Website-to-CRM Webhook Sync',
+      'Lead Qualification & Scoring',
+      'Kanban Deal Pipelines',
+      'WhatsApp & Email Automation',
+      'Multi-Agent Assignment Hub',
+      'Custom Analytics & Telemetry',
+    ],
+    problems: [
+      'Leads from your website getting lost or delayed in follow-up',
+      'Clunky spreadsheets causing confusion and duplicate outreach',
+      'Off-the-shelf CRMs (Salesforce, HubSpot) too expensive or complex',
+      'Lack of visibility into sales rep activities and closing rates',
+      'No unified record of customer conversations across channels',
+    ],
+    benefits: [
+      'Instant real-time lead capture from your website into CRM',
+      'Automated WhatsApp and email welcome sequences in under 60 seconds',
+      'Tailored exactly to your unique business workflow and sales stages',
+      'One-time custom build with zero recurring per-user monthly SaaS fees',
+      'Intuitive dashboards your sales team actually loves using',
+    ],
+    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Socket.io', 'WhatsApp Cloud API', 'Redis'],
+    approach: [
+      { step: 'Pipeline Mapping', description: 'Analyzing your sales funnel from initial lead to closed deal' },
+      { step: 'Architecture', description: 'Designing database schemas, role permissions, and webhook sync' },
+      { step: 'UI/UX Design', description: 'Crafting fast, clean lead boards and contact management screens' },
+      { step: 'Development', description: 'Building the full-stack portal with automated triggers and APIs' },
+      { step: 'Website Integration', description: 'Connecting forms, landing pages, and lead sources in real-time' },
+      { step: 'Deployment & Training', description: 'Onboarding your team and ongoing scalability support' },
+    ],
+    faqs: [
+      { question: 'Can you connect my existing website to the custom CRM?', answer: 'Yes! We create secure REST/Webhook APIs so every contact form submission, order, or inquiry on your website instantly reflects in your custom CRM with zero delay.' },
+      { question: 'Why build a custom CRM instead of using Zoho or HubSpot?', answer: 'Off-the-shelf CRMs charge hefty monthly fees per user and force you into rigid workflows. A custom CRM gives you 100% ownership, zero per-seat subscription fees, and features tailored precisely to how your business operates.' },
+      { question: 'Can the CRM send automated WhatsApp messages to new leads?', answer: 'Absolutely. We integrate official WhatsApp Cloud APIs to send instant confirmation messages, notify sales agents, and trigger automated follow-up sequences.' },
+      { question: 'Is role-based access supported?', answer: 'Yes. You can have distinct roles for Super Admins, Branch Managers, and Sales Representatives with granular access control.' },
+    ],
+  },
 ];
 
 export const getServiceBySlug = (slug) => services.find(s => s.slug === slug);
 export const getServiceIcon = (iconName) => {
-  const icons = { Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat };
+  const icons = { Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat, Database, Users };
   return icons[iconName] || Globe;
 };

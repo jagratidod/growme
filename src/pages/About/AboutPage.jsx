@@ -89,11 +89,11 @@ export default function AboutPage() {
               </SectionHeading>
 
               <p className="mt-6 text-lg md:text-xl text-black font-semibold max-w-xl leading-relaxed">
-                A team of innovators, designers, and full-stack developers building digital products that create real impact for businesses.
+                A team of innovators, designers, and full-stack engineers building modern websites, custom CRM systems, and scalable digital products that drive measurable business growth.
               </p>
 
               <p className="mt-4 text-base text-medium-gray leading-relaxed max-w-xl">
-                Founded with the belief that technology should empower growth rather than complicate it, Growme Tech pairs Swiss-inspired design rigor with cutting-edge MERN stack engineering. We collaborate closely with ambitious founders and established enterprises across the globe.
+                Founded with the belief that technology should empower growth rather than complicate it, Growme Tech pairs Swiss-inspired design rigor with full-stack engineering. Whether you need a high-converting customer-facing website or a bespoke CRM system to manage your leads and operations under one unified roof, we engineer solutions built to scale.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">

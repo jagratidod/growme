@@ -56,7 +56,7 @@ export default function HeroSection() {
 
             {/* Supporting Copy */}
             <p className="mt-6 text-base md:text-lg text-medium-gray font-medium max-w-xl leading-relaxed">
-              We design, develop, and scale digital products — from websites and mobile apps to custom software and AI solutions.
+              We design, develop, and scale high-impact digital solutions — from high-converting websites and custom CRM systems to scalable mobile apps and enterprise automation.
             </p>
 
             {/* CTA Buttons */}
@@ -120,8 +120,8 @@ export default function HeroSection() {
                   {/* Code snippet decoration */}
                   <div className="font-mono text-xs text-black/80 space-y-1.5 leading-relaxed">
                     <div className="text-violet font-bold">const company = "Growme Tech";</div>
-                    <div>const mission = ["Design", "Develop", "Scale"];</div>
-                    <div className="text-emerald-700 font-semibold">// Transforming visions into products</div>
+                    <div>const coreServices = ["Websites", "Custom CRMs", "Mobile Apps"];</div>
+                    <div className="text-emerald-700 font-semibold">// Seamless Web-to-CRM automation</div>
                     <div className="text-black font-semibold">
                       await client.launch({'{'} success: true {'}'});
                     </div>
@@ -132,7 +132,7 @@ export default function HeroSection() {
                     <div className="relative">
                       <div className="w-32 h-24 bg-white border-2 border-black rounded-xl shadow-brutal flex flex-col items-center justify-center p-3 rotate-[-3deg]">
                         <Laptop size={36} className="text-primary mb-1" />
-                        <span className="text-[11px] font-display font-bold">&lt;/&gt; Scalable Dev</span>
+                        <span className="text-[11px] font-display font-bold">&lt;/&gt; Web + CRM Dev</span>
                       </div>
                       {/* Barcode badge sticker */}
                       <div className="absolute -bottom-4 -right-4 bg-yellow-sticker border-2 border-black rounded-lg px-2.5 py-1 shadow-brutal-sm rotate-[5deg] text-[10px] font-mono font-black">
@@ -160,10 +160,10 @@ export default function HeroSection() {
 
               {/* Floating Neo-Brutalist Badges around visual box */}
               <div className="absolute -top-5 -left-4 z-20">
-                <StickerBadge text="DESIGN" color="orange" rotate={-6} size="md" />
+                <StickerBadge text="WEBSITES" color="orange" rotate={-6} size="md" />
               </div>
               <div className="absolute -top-6 right-8 z-20">
-                <StickerBadge text="DEVELOP" color="white" rotate={4} size="md" />
+                <StickerBadge text="CUSTOM CRM" color="yellow" rotate={4} size="md" />
               </div>
               <div className="absolute -bottom-4 -left-3 z-20">
                 <StickerBadge text="SCALE" color="violet" rotate={3} size="md" />

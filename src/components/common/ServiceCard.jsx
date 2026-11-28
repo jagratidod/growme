@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat } from 'lucide-react';
+import { Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat, Database, Users } from 'lucide-react';
 
-const iconMap = { Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat };
+const iconMap = { Globe, Smartphone, Palette, Code2, ShoppingCart, Bot, Cloud, Repeat, Database, Users };
 
 export default function ServiceCard({ service, className = '' }) {
   const IconComponent = iconMap[service.icon] || Globe;

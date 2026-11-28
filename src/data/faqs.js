@@ -1,7 +1,15 @@
 export const generalFaqs = [
   {
     question: 'What services does Growme Tech offer?',
-    answer: 'We offer a comprehensive range of digital services including web development, mobile app development, UI/UX design, custom software development, e-commerce solutions, AI & automation, cloud solutions, and digital transformation consulting.',
+    answer: 'We specialize in building modern, high-converting websites and bespoke Custom CRM systems, alongside cross-platform mobile apps, UI/UX design, custom software development, e-commerce stores, and AI automation.',
+  },
+  {
+    question: 'Can you build both a website and a connected custom CRM for my business?',
+    answer: 'Yes, absolutely! This is one of our flagship specialties. We design and develop your public-facing website and seamlessly integrate it with a custom-built CRM. Whenever a visitor submits an inquiry or booking on your website, it instantly creates a lead in your CRM, alerts your sales reps, and triggers automated WhatsApp and email follow-ups.',
+  },
+  {
+    question: 'Why choose a custom CRM over generic software like Zoho or Salesforce?',
+    answer: 'Generic CRMs force your team into rigid workflows and charge heavy per-user monthly subscription fees that scale up quickly. A custom CRM built by Growme gives you 100% code ownership, zero per-seat subscription fees, and features engineered specifically around your sales and operational workflows.',
   },
   {
     question: 'How much does software development cost?',

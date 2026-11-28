@@ -85,6 +85,33 @@ export const projects = [
   },
   {
     id: 4,
+    slug: 'leadflow-crm-platform',
+    title: 'LeadFlow Custom CRM & Sales Hub',
+    description: 'An enterprise-grade Custom CRM and lead distribution engine built to capture website inquiries, automate WhatsApp follow-ups, and manage high-volume sales pipelines.',
+    shortDescription: 'Bespoke CRM with real-time website lead capture and WhatsApp automation.',
+    industry: 'Sales & CRM',
+    category: 'Custom Software',
+    platform: 'Web',
+    timeline: '8 Weeks',
+    technologies: ['React.js', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'WhatsApp Cloud API'],
+    challenge: 'The client was losing high-intent leads generated from their marketing website due to delayed manual spreadsheet entries, missed follow-ups, and lack of automated lead distribution to sales representatives.',
+    solution: 'Engineered a bespoke full-stack CRM with real-time webhook lead intake from their website, interactive Kanban deal pipelines, instant WhatsApp/SMS notifications, and role-based agent performance analytics.',
+    features: [
+      'Instant website-to-CRM webhook ingestion (< 1 sec)',
+      'Visual Kanban pipeline with customizable deal stages',
+      'Automated WhatsApp & Email welcome sequences',
+      'Multi-agent lead assignment & round-robin dispatch',
+      'Real-time notifications via WebSockets',
+      'Sales rep activity & conversion telemetry dashboard',
+    ],
+    results: [
+      { metric: 'Lead Response Time', value: 'Reduced from 3.5 hours to under 60 seconds with automated dispatch', highlight: '<60s' },
+      { metric: 'Lead Conversion Rate', value: '+38% increase in closed sales within the first 90 days', highlight: '+38%' },
+      { metric: 'Admin Time Saved', value: 'Eliminated 16+ hours of manual spreadsheet data entry per week', highlight: '16h/wk' },
+    ],
+  },
+  {
+    id: 5,
     slug: 'quick-commerce-platform',
     title: 'Quick Commerce Platform',
     description: 'A hyperlocal delivery platform with real-time inventory, order management, and multi-seller support.',
@@ -111,7 +138,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     slug: 'travel-booking-platform',
     title: 'Travel Booking Platform',
     description: 'A comprehensive travel booking platform with hotel reservations, activity bookings, and itinerary management.',
@@ -138,7 +165,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     slug: 'delivery-management-system',
     title: 'Delivery Management System',
     description: 'An end-to-end delivery management system with route optimization, driver tracking, and automated dispatching.',
@@ -165,7 +192,7 @@ export const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     slug: 'healthcare-patient-portal',
     title: 'Healthcare Patient Portal',
     description: 'A secure patient management portal with appointment scheduling, medical records, and telemedicine integration.',
@@ -192,7 +219,7 @@ export const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     slug: 'edtech-learning-platform',
     title: 'EdTech Learning Platform',
     description: 'An interactive online learning platform with live classes, course management, and progress tracking.',
@@ -219,7 +246,7 @@ export const projects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     slug: 'fintech-payment-gateway',
     title: 'Fintech Payment Gateway',
     description: 'A secure payment processing platform with multi-currency support, fraud detection, and merchant management.',
