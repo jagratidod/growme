@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll } from 'framer-motion';
-import { ArrowLeft, CheckCircle2, Calendar, Layout, Briefcase, ArrowUpRight, TrendingUp } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Calendar, Layout, Briefcase, ArrowUpRight, TrendingUp, ExternalLink } from 'lucide-react';
 import { getProjectBySlug, projects } from '../../data/projects';
 import SectionLabel from '../../components/common/SectionLabel';
 import SectionHeading from '../../components/common/SectionHeading';
@@ -60,8 +60,14 @@ export default function ProjectDetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7">
-              <div className="mb-4">
+              <div className="mb-4 flex items-center gap-2">
                 <StickerBadge text="CASE STUDY" color="orange" rotate={-2} size="md" />
+                {project.liveUrl && (
+                  <span className="px-3 py-1 bg-emerald-400 text-black border-2 border-black font-mono text-xs font-black rounded-full shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-950 animate-pulse" />
+                    LIVE PRODUCTION
+                  </span>
+                )}
               </div>
 
               <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black leading-[1.08] tracking-tight uppercase">
@@ -102,8 +108,19 @@ export default function ProjectDetailPage() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <Button to="/get-a-quote" variant="primary" size="lg" arrow>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-yellow-sticker text-black font-display font-black text-sm uppercase tracking-wider border-2 border-black rounded-xl shadow-brutal hover:bg-yellow-300 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
+                  >
+                    Visit Live Website
+                    <ExternalLink size={18} />
+                  </a>
+                )}
+                <Button to="/get-a-quote" variant={project.liveUrl ? "secondary" : "primary"} size="lg" arrow>
                   Discuss a Similar Project
                 </Button>
               </div>
@@ -116,10 +133,23 @@ export default function ProjectDetailPage() {
                     label={`${project.title} Architecture`}
                     slug={project.slug}
                     category={project.category}
+                    liveUrl={project.liveUrl}
                   />
                   <div className="mt-4 flex items-center justify-between text-xs font-display font-bold">
                     <span>{project.category}</span>
-                    <span className="text-primary">Deployed to Production ↗</span>
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline flex items-center gap-1 font-mono font-bold"
+                      >
+                        {project.liveUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                        <ArrowUpRight size={13} />
+                      </a>
+                    ) : (
+                      <span className="text-primary">Deployed to Production ↗</span>
+                    )}
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -left-4">
@@ -234,9 +264,9 @@ export default function ProjectDetailPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ProjectImagePlaceholder label={`${project.title} — Desktop Dashboard`} slug={project.slug} category={project.category} />
-            <ProjectImagePlaceholder label={`${project.title} — Mobile Experience`} slug={project.slug} category={project.category} />
-            <ProjectImagePlaceholder label={`${project.title} — Architecture Schema`} slug={project.slug} category={project.category} />
+            <ProjectImagePlaceholder label={`${project.title} — Desktop Interface`} slug={project.slug} category={project.category} liveUrl={project.liveUrl} />
+            <ProjectImagePlaceholder label={`${project.title} — Mobile Experience`} slug={project.slug} category={project.category} liveUrl={project.liveUrl} />
+            <ProjectImagePlaceholder label={`${project.title} — Architecture Schema`} slug={project.slug} category={project.category} liveUrl={project.liveUrl} />
           </div>
 
         </div>

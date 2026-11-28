@@ -15,17 +15,22 @@ export default function ProjectImagePlaceholder({
   className = '', 
   label = 'Project Preview', 
   slug = '', 
-  category = '' 
+  category = '',
+  liveUrl = ''
 }) {
   // Determine mock visual theme based on label or slug
   const text = (label + ' ' + slug + ' ' + category).toLowerCase();
 
   const isCommerce = text.includes('commerce') || text.includes('order');
-  const isTravel = text.includes('travel') || text.includes('booking');
+  const isTravel = text.includes('travel') || text.includes('booking') || text.includes('weekend') || text.includes('trek') || text.includes('escape') || text.includes('kedarkantha');
   const isLogistics = text.includes('delivery') || text.includes('logistic') || text.includes('route');
   const isHealth = text.includes('health') || text.includes('patient') || text.includes('medical');
   const isEdTech = text.includes('edtech') || text.includes('learn') || text.includes('student');
   const isFintech = text.includes('fintech') || text.includes('payment') || text.includes('gateway');
+
+  const displayDomain = liveUrl 
+    ? liveUrl.replace(/^https?:\/\//, '').replace(/\/$/, '') 
+    : 'preview.growme.tech';
 
   return (
     <div
@@ -40,15 +45,15 @@ export default function ProjectImagePlaceholder({
           <span className="w-2.5 h-2.5 rounded-full bg-green-400 border border-black inline-block" />
         </div>
         
-        {/* Fake URL Bar */}
-        <div className="bg-white border border-black/30 rounded px-2.5 py-0.5 text-[9px] font-mono text-black/70 flex items-center gap-1">
+        {/* Real / Preview URL Bar */}
+        <div className="bg-white border border-black/30 rounded px-2.5 py-0.5 text-[9px] font-mono text-black/70 flex items-center gap-1 max-w-[170px] sm:max-w-[220px] truncate">
           <span className="text-violet font-bold">https://</span>
-          <span>preview.growme.tech</span>
+          <span className="truncate">{displayDomain}</span>
         </div>
 
         <div className="flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-[9px] font-mono font-bold text-black uppercase">Live</span>
+          <span className={`w-1.5 h-1.5 rounded-full ${liveUrl ? 'bg-emerald-500 animate-pulse' : 'bg-emerald-500'}`} />
+          <span className="text-[9px] font-mono font-bold text-black uppercase">{liveUrl ? 'Live' : 'Preview'}</span>
         </div>
       </div>
 
@@ -75,7 +80,7 @@ export default function ProjectImagePlaceholder({
               </span>
               <span className="text-[9px] font-mono text-medium-gray block">
                 {isCommerce && 'Real-time WebSocket Sync • 12ms'}
-                {isTravel && 'Multi-Vendor GDS Engine'}
+                {isTravel && (liveUrl ? 'Production Live Travel Platform' : 'Multi-Vendor GDS Engine')}
                 {isLogistics && 'AI Route Matrix Optimizer'}
                 {isHealth && 'HIPAA Compliant WebRTC Video'}
                 {isEdTech && 'Interactive Gamified Modules'}
@@ -88,7 +93,7 @@ export default function ProjectImagePlaceholder({
           </div>
 
           <span className="hidden sm:inline-block bg-yellow-sticker text-black text-[9px] font-mono font-bold px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_#111]">
-            99.98% SLA
+            {liveUrl ? '100% Uptime' : '99.98% SLA'}
           </span>
         </div>
 
@@ -97,21 +102,21 @@ export default function ProjectImagePlaceholder({
           <div className="bg-white border border-black rounded-lg p-2 shadow-brutal-sm">
             <span className="text-[8px] font-mono uppercase text-medium-gray block">Metrics</span>
             <span className="text-xs font-display font-black text-primary block mt-0.5">
-              {isCommerce ? '+340% GMV' : isLogistics ? '14.2m SLA' : isHealth ? '65k Vitals' : '+185% KPI'}
+              {isCommerce ? '+340% GMV' : isTravel ? '+210% Inquiries' : isLogistics ? '14.2m SLA' : isHealth ? '65k Vitals' : '+185% KPI'}
             </span>
           </div>
 
           <div className="bg-white border border-black rounded-lg p-2 shadow-brutal-sm">
             <span className="text-[8px] font-mono uppercase text-medium-gray block">Latency</span>
             <span className="text-xs font-display font-black text-black block mt-0.5">
-              18ms Edge
+              {liveUrl ? '12ms Edge' : '18ms Edge'}
             </span>
           </div>
 
           <div className="bg-white border border-black rounded-lg p-2 shadow-brutal-sm">
             <span className="text-[8px] font-mono uppercase text-medium-gray block">Status</span>
             <span className="text-xs font-display font-black text-emerald-600 block mt-0.5 flex items-center gap-1">
-              <ShieldCheck size={11} /> Healthy
+              <ShieldCheck size={11} /> {liveUrl ? 'Live Production' : 'Healthy'}
             </span>
           </div>
         </div>
@@ -122,7 +127,7 @@ export default function ProjectImagePlaceholder({
             <div className="h-1.5 w-12 bg-black/10 rounded-full overflow-hidden">
               <div className="h-full bg-primary w-4/5 rounded-full" />
             </div>
-            <span className="text-black font-bold">PROD // US-EAST-1</span>
+            <span className="text-black font-bold">PROD // LIVE EDGE</span>
           </div>
           <span className="text-primary font-bold flex items-center gap-0.5">
             <TrendingUp size={11} /> Verified Impact
